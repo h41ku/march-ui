@@ -1,0 +1,43 @@
+.theme-toggler {
+    border: 0;
+    outline: 0;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+.theme-toggler__icon {
+    display: none;
+    color: inherit;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    width: 3em;
+    height: 3em;
+}
+
+.theme-toggler__icon > * {
+    font-size: 2.5em;
+}
+
+.theme-toggler__icon--auto {
+    display: flex;
+}
+
+.theme--light .theme-toggler__icon--light {
+    display: flex;
+}
+
+.theme--light .theme-toggler__icon--auto {
+    display: none;
+}
+
+.theme--dark .theme-toggler__icon--dark {
+    display: flex;
+}
+
+.theme--dark .theme-toggler__icon--auto {
+    display: none;
+}

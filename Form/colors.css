@@ -1,0 +1,42 @@
+html {
+
+    /* light theme */
+
+    --theme-light-form-border-color: hsl(0,0%,80%);
+    --theme-light-form-header-color: hsl(0,0%,95%);
+    --theme-light-form-body-color: hsl(0,0%,98%);
+
+    /* dark theme */
+
+    --theme-dark-form-border-color: hsl(0,0%,25%);
+    --theme-dark-form-header-color: hsl(0,0%,22%);
+    --theme-dark-form-body-color: hsl(0,0%,16%);
+}
+
+.theme--light {
+    --form-border-color: var(--theme-light-form-border-color);
+    --form-header-color: var(--theme-light-form-header-color);
+    --form-body-color: var(--theme-light-form-body-color);
+}
+
+.theme--dark {
+    --form-border-color: var(--theme-dark-form-border-color);
+    --form-header-color: var(--theme-dark-form-header-color);
+    --form-body-color: var(--theme-dark-form-body-color);
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        --form-border-color: var(--theme-light-form-border-color);
+        --form-header-color: var(--theme-light-form-header-color);
+        --form-body-color: var(--theme-light-form-body-color);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --form-border-color: var(--theme-dark-form-border-color);
+        --form-header-color: var(--theme-dark-form-header-color);
+        --form-body-color: var(--theme-dark-form-body-color);
+    }
+}

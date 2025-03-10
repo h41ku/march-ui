@@ -1,0 +1,87 @@
+.notice.notice--error, .notice.notice--danger {
+    --notice-color: var(--error-color);
+    --notice-background-color: var(--notice-error-background-color);
+    --notice-icon-color: var(--notice-error-icon-color);
+    --notice-border-color: var(--notice-error-border-color);
+}
+
+.notice.notice--warning {
+    --notice-color: var(--warning-color);
+    --notice-background-color: var(--notice-warning-background-color);
+    --notice-icon-color: var(--notice-warning-icon-color);
+    --notice-border-color: var(--notice-warning-border-color);
+}
+
+.notice.notice--success {
+    --notice-color: var(--success-color);
+    --notice-background-color: var(--notice-success-background-color);
+    --notice-icon-color: var(--notice-success-icon-color);
+    --notice-border-color: var(--notice-success-border-color);
+}
+
+.notice.notice--neutral {
+    --notice-color: var(--neutral-color);
+    --notice-background-color: var(--notice-neutral-background-color);
+    --notice-icon-color: var(--notice-neutral-icon-color);
+    --notice-border-color: var(--notice-neutral-border-color);
+}
+
+.notice {
+    --notice-color: var(--accent-color);
+    --notice-background-color: var(--notice-accent-background-color);
+    --notice-icon-color: var(--notice-accent-icon-color);
+    --notice-border-color: var(--notice-accent-border-color);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 28em;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    background-color: var(--notice-background-color);
+}
+
+.notice--bordered {
+    border: 1px solid var(--notice-border-color);
+}
+
+.notice__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75em 1em 0.75em 0;
+    box-sizing: border-box;
+    width: 100%;
+    gap: 0.2em;
+    justify-content: center;
+}
+
+.notice__icon {
+    color: var(--notice-color);
+    background-color: var(--notice-icon-color);
+    margin: 0.75em;
+    border-radius: 0.5em;
+    overflow: hidden;
+    width: 2.5em;
+    height: 2.5em;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.notice__icon > * {
+    font-size: 1.75em;
+    width: 1em;
+    height: 1em;
+}
+
+.notice__title {
+    font-size: 1em;
+}
+
+.notice__text {
+    font-size: 0.85em;
+    color: var(--notice-color);
+}

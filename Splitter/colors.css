@@ -1,0 +1,30 @@
+html {
+
+    /* light theme */
+
+    --theme-light-splitter-color: hsl(0,0%,80%);
+
+    /* dark theme */
+
+    --theme-dark-splitter-color: hsl(0,0%,25%);
+}
+
+.theme--light {
+    --splitter-color: var(--theme-light-splitter-color);
+}
+
+.theme--dark {
+    --splitter-color: var(--theme-dark-splitter-color);
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        --splitter-color: var(--theme-light-splitter-color);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --splitter-color: var(--theme-dark-splitter-color);
+    }
+}

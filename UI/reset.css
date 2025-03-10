@@ -1,0 +1,28 @@
+html {
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 1.25;
+}
+
+body {
+    margin: 0;
+    overflow-y: scroll;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.firefox, .firefox * {
+    scrollbar-width: thin;
+}
+
+* {
+    color: inherit;
+}

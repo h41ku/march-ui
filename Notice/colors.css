@@ -1,0 +1,114 @@
+html {
+
+    /* light theme */
+
+    --theme-light-notice-accent-background-color: hsl(266,100%,95%);
+    --theme-light-notice-accent-icon-color: hsl(266,100%,90%);
+    --theme-light-notice-accent-border-color: hsl(266,100%,90%);
+    --theme-light-notice-error-background-color: hsl(0,79%,96%);
+    --theme-light-notice-error-icon-color: hsl(0,79%,93%);
+    --theme-light-notice-error-border-color: hsl(0,79%,90%);
+    --theme-light-notice-warning-background-color: hsl(41,100%,92%);
+    --theme-light-notice-warning-icon-color: hsl(41,95%,87%);
+    --theme-light-notice-warning-border-color: hsl(41,90%,83%);
+    --theme-light-notice-success-background-color: hsl(125,68%,93%);
+    --theme-light-notice-success-icon-color: hsl(125,60%,87%);
+    --theme-light-notice-success-border-color: hsl(125,60%,88%);
+    --theme-light-notice-neutral-background-color: hsl(0,0%,98%);
+    --theme-light-notice-neutral-icon-color: hsl(0,0%,95%);
+    --theme-light-notice-neutral-border-color: hsl(0,0%,80%);
+
+    /* dark theme */
+
+    --theme-dark-notice-accent-background-color: hsl(266,22%,17%);
+    --theme-dark-notice-accent-icon-color: hsl(266,40%,24%);
+    --theme-dark-notice-accent-border-color: hsl(266,40%,30%);
+    --theme-dark-notice-error-background-color: hsl(0,38%,16%);
+    --theme-dark-notice-error-icon-color: hsl(0,60%,20%);
+    --theme-dark-notice-error-border-color: hsl(0,60%,24%);
+    --theme-dark-notice-warning-background-color: hsl(41,30%,14%);
+    --theme-dark-notice-warning-icon-color: hsl(41,60%,18%);
+    --theme-dark-notice-warning-border-color: hsl(41,60%,20%);
+    --theme-dark-notice-success-background-color: hsl(125,30%,14%);
+    --theme-dark-notice-success-icon-color: hsl(125,60%,18%);
+    --theme-dark-notice-success-border-color: hsl(125,60%,19%);
+    --theme-dark-notice-neutral-background-color: hsl(0,0%,16%);
+    --theme-dark-notice-neutral-icon-color: hsl(0,0%,22%);
+    --theme-dark-notice-neutral-border-color: hsl(0,0%,25%);
+}
+
+.theme--light {
+    --notice-accent-background-color: var(--theme-light-notice-accent-background-color);
+    --notice-accent-icon-color: var(--theme-light-notice-accent-icon-color);
+    --notice-accent-border-color: var(--theme-light-notice-accent-border-color);
+    --notice-error-background-color: var(--theme-light-notice-error-background-color);
+    --notice-error-icon-color: var(--theme-light-notice-error-icon-color);
+    --notice-error-border-color: var(--theme-light-notice-error-border-color);
+    --notice-warning-background-color: var(--theme-light-notice-warning-background-color);
+    --notice-warning-icon-color: var(--theme-light-notice-warning-icon-color);
+    --notice-warning-border-color: var(--theme-light-notice-warning-border-color);
+    --notice-success-background-color: var(--theme-light-notice-success-background-color);
+    --notice-success-icon-color: var(--theme-light-notice-success-icon-color);
+    --notice-success-border-color: var(--theme-light-notice-success-border-color);
+    --notice-neutral-background-color: var(--theme-light-notice-neutral-background-color);
+    --notice-neutral-icon-color: var(--theme-light-notice-neutral-icon-color);
+    --notice-neutral-border-color: var(--theme-light-notice-neutral-border-color);
+}
+
+.theme--dark {
+    --notice-accent-background-color: var(--theme-dark-notice-accent-background-color);
+    --notice-accent-icon-color: var(--theme-dark-notice-accent-icon-color);
+    --notice-accent-border-color: var(--theme-dark-notice-accent-border-color);
+    --notice-error-background-color: var(--theme-dark-notice-error-background-color);
+    --notice-error-icon-color: var(--theme-dark-notice-error-icon-color);
+    --notice-error-border-color: var(--theme-dark-notice-error-border-color);
+    --notice-warning-background-color: var(--theme-dark-notice-warning-background-color);
+    --notice-warning-icon-color: var(--theme-dark-notice-warning-icon-color);
+    --notice-warning-border-color: var(--theme-dark-notice-warning-border-color);
+    --notice-success-background-color: var(--theme-dark-notice-success-background-color);
+    --notice-success-icon-color: var(--theme-dark-notice-success-icon-color);
+    --notice-success-border-color: var(--theme-dark-notice-success-border-color);
+    --notice-neutral-background-color: var(--theme-dark-notice-neutral-background-color);
+    --notice-neutral-icon-color: var(--theme-dark-notice-neutral-icon-color);
+    --notice-neutral-border-color: var(--theme-dark-notice-neutral-border-color);
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        --notice-accent-background-color: var(--theme-light-notice-accent-background-color);
+        --notice-accent-icon-color: var(--theme-light-notice-accent-icon-color);
+        --notice-accent-border-color: var(--theme-light-notice-accent-border-color);
+        --notice-error-background-color: var(--theme-light-notice-error-background-color);
+        --notice-error-icon-color: var(--theme-light-notice-error-icon-color);
+        --notice-error-border-color: var(--theme-light-notice-error-border-color);
+        --notice-warning-background-color: var(--theme-light-notice-warning-background-color);
+        --notice-warning-icon-color: var(--theme-light-notice-warning-icon-color);
+        --notice-warning-border-color: var(--theme-light-notice-warning-border-color);
+        --notice-success-background-color: var(--theme-light-notice-success-background-color);
+        --notice-success-icon-color: var(--theme-light-notice-success-icon-color);
+        --notice-success-border-color: var(--theme-light-notice-success-border-color);
+        --notice-neutral-background-color: var(--theme-light-notice-neutral-background-color);
+        --notice-neutral-icon-color: var(--theme-light-notice-neutral-icon-color);
+        --notice-neutral-border-color: var(--theme-light-notice-neutral-border-color);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --notice-accent-background-color: var(--theme-dark-notice-accent-background-color);
+        --notice-accent-icon-color: var(--theme-dark-notice-accent-icon-color);
+        --notice-accent-border-color: var(--theme-dark-notice-accent-border-color);
+        --notice-error-background-color: var(--theme-dark-notice-error-background-color);
+        --notice-error-icon-color: var(--theme-dark-notice-error-icon-color);
+        --notice-error-border-color: var(--theme-dark-notice-error-border-color);
+        --notice-warning-background-color: var(--theme-dark-notice-warning-background-color);
+        --notice-warning-icon-color: var(--theme-dark-notice-warning-icon-color);
+        --notice-warning-border-color: var(--theme-dark-notice-warning-border-color);
+        --notice-success-background-color: var(--theme-dark-notice-success-background-color);
+        --notice-success-icon-color: var(--theme-dark-notice-success-icon-color);
+        --notice-success-border-color: var(--theme-dark-notice-success-border-color);
+        --notice-neutral-background-color: var(--theme-dark-notice-neutral-background-color);
+        --notice-neutral-icon-color: var(--theme-dark-notice-neutral-icon-color);
+        --notice-neutral-border-color: var(--theme-dark-notice-neutral-border-color);
+    }
+}

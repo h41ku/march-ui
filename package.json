@@ -1,0 +1,20 @@
+{
+  "name": "march-ui",
+  "version": "0.0.1",
+  "description": "Lightweight UI-kit for Mithril.js",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "dev": "esbuild __examples__/index.jsx --bundle --outdir=__examples__/dist --jsx-factory=m --jsx-fragment='\"[\"' --watch",
+    "build": "esbuild __examples__/index.jsx --bundle --minify --outdir=__examples__/dist --jsx-factory=m --jsx-fragment='\"[\"'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "mithril": "^2.2.11"
+  }
+}

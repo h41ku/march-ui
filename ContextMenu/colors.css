@@ -1,0 +1,42 @@
+html {
+
+    /* light theme */
+
+    --theme-light-contextmenu-background-color: hsl(0,0%,98%);
+    --theme-light-contextmenu-border-color: hsl(0,0%,80%);
+    --theme-light-contextmenu-shadow-color: hsla(0,0%,0%,0.1);
+
+    /* dark theme */
+
+    --theme-dark-contextmenu-background-color: hsl(0,0%,16%);
+    --theme-dark-contextmenu-border-color: hsl(0,0%,25%);
+    --theme-dark-contextmenu-shadow-color: hsla(0,0%,100%,0.1);
+}
+
+.theme--light {
+    --contextmenu-background-color: var(--theme-light-contextmenu-background-color);
+    --contextmenu-border-color: var(--theme-light-contextmenu-border-color);
+    --contextmenu-shadow-color: var(--theme-light-contextmenu-shadow-color);
+}
+
+.theme--dark {
+    --contextmenu-background-color: var(--theme-dark-contextmenu-background-color);
+    --contextmenu-border-color: var(--theme-dark-contextmenu-border-color);
+    --contextmenu-shadow-color: var(--theme-dark-contextmenu-shadow-color);
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        --contextmenu-background-color: var(--theme-light-contextmenu-background-color);
+        --contextmenu-border-color: var(--theme-light-contextmenu-border-color);
+        --contextmenu-shadow-color: var(--theme-light-contextmenu-shadow-color);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --contextmenu-background-color: var(--theme-dark-contextmenu-background-color);
+        --contextmenu-border-color: var(--theme-dark-contextmenu-border-color);
+        --contextmenu-shadow-color: var(--theme-dark-contextmenu-shadow-color);
+    }
+}

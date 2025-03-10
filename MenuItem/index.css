@@ -1,0 +1,49 @@
+.menuitem {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: center;
+    user-select: none;
+    gap: 1em;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    color: var(--menuitem-foreground-color);
+    background-color: var(--menuitem-background-color);
+}
+
+.menuitem__icon {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuitem__title {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+
+.menuitem--selected {
+    color: var(--menuitem-foreground-color-selected);
+    background-color: var(--menuitem-background-color-selected);
+}
+
+.menuitem.menuitem--selected:hover {
+    color: var(--menuitem-foreground-color-selected-hover);
+    background-color: var(--menuitem-background-color-selected-hover);
+}
+
+.menuitem:hover {
+    color: var(--menuitem-foreground-color-hover);
+    background-color: var(--menuitem-background-color-hover);
+}
+
+.menuitem--disabled {
+    cursor: default;
+    color: var(--menuitem-foreground-color-disabled);
+    background-color: var(--menuitem-background-color-disabled);
+    pointer-events: none;
+}

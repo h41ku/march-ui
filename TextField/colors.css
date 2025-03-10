@@ -1,0 +1,96 @@
+html {
+
+    /* light theme */
+
+    --theme-light-textfield-foreground-color: var(--theme-light-foreground-color);
+    --theme-light-textfield-background-color: hsl(0,0%,95%);
+    --theme-light-textfield-border-color: hsl(0,0%,60%);
+    --theme-light-textfield-icon-color: hsl(0,0%,50%);
+    --theme-light-textfield-foreground-color-focused: var(--theme-light-foreground-color);
+    --theme-light-textfield-background-color-focused: hsl(0,0%,97%);
+    --theme-light-textfield-border-color-focused: hsl(0,0%,27%);
+    --theme-light-textfield-icon-color-focused: hsl(0,0%,25%);
+    --theme-light-textfield-foreground-color-disabled: hsl(0,0%,60%);
+    --theme-light-textfield-background-color-disabled: hsl(0,0%,97%);
+    --theme-light-textfield-border-color-disabled: hsl(0,0%,85%);
+    --theme-light-textfield-icon-color-disabled: hsl(0,0%,65%);
+
+    /* dark theme */
+
+    --theme-dark-textfield-foreground-color: var(--theme-dark-foreground-color);
+    --theme-dark-textfield-background-color: hsl(0,0%,16%);
+    --theme-dark-textfield-border-color: hsl(0,0%,33%);
+    --theme-dark-textfield-icon-color: hsl(0,0%,50%);
+    --theme-dark-textfield-foreground-color-focused: var(--theme-dark-foreground-color);
+    --theme-dark-textfield-background-color-focused: hsl(0,0%,18%);
+    --theme-dark-textfield-border-color-focused: hsl(0,0%,47%);
+    --theme-dark-textfield-icon-color-focused: hsl(0,0%,75%);
+    --theme-dark-textfield-foreground-color-disabled: hsl(0,0%,50%);
+    --theme-dark-textfield-background-color-disabled: hsl(0,0%,18%);
+    --theme-dark-textfield-border-color-disabled: hsl(0,0%,25%);
+    --theme-dark-textfield-icon-color-disabled: hsl(0,0%,30%);
+}
+
+.theme--light {
+    --textfield-foreground-color: var(--theme-light-textfield-foreground-color);
+    --textfield-background-color: var(--theme-light-textfield-background-color);
+    --textfield-border-color: var(--theme-light-textfield-border-color);
+    --textfield-icon-color: var(--theme-light-textfield-icon-color);
+    --textfield-foreground-color-focused: var(--theme-light-textfield-foreground-color-focused);
+    --textfield-background-color-focused: var(--theme-light-textfield-background-color-focused);
+    --textfield-border-color-focused: var(--theme-light-textfield-border-color-focused);
+    --textfield-icon-color-focused: var(--theme-light-textfield-icon-color-focused);
+    --textfield-foreground-color-disabled: var(--theme-light-textfield-foreground-color-disabled);
+    --textfield-background-color-disabled: var(--theme-light-textfield-background-color-disabled);
+    --textfield-border-color-disabled: var(--theme-light-textfield-border-color-disabled);
+    --textfield-icon-color-disabled: var(--theme-light-textfield-icon-color-disabled);
+}
+
+.theme--dark {
+    --textfield-foreground-color: var(--theme-dark-textfield-foreground-color);
+    --textfield-background-color: var(--theme-dark-textfield-background-color);
+    --textfield-border-color: var(--theme-dark-textfield-border-color);
+    --textfield-icon-color: var(--theme-dark-textfield-icon-color);
+    --textfield-foreground-color-focused: var(--theme-dark-textfield-foreground-color-focused);
+    --textfield-background-color-focused: var(--theme-dark-textfield-background-color-focused);
+    --textfield-border-color-focused: var(--theme-dark-textfield-border-color-focused);
+    --textfield-icon-color-focused: var(--theme-dark-textfield-icon-color-focused);
+    --textfield-foreground-color-disabled: var(--theme-dark-textfield-foreground-color-disabled);
+    --textfield-background-color-disabled: var(--theme-dark-textfield-background-color-disabled);
+    --textfield-border-color-disabled: var(--theme-dark-textfield-border-color-disabled);
+    --textfield-icon-color-disabled: var(--theme-dark-textfield-icon-color-disabled);
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        --textfield-foreground-color: var(--theme-light-textfield-foreground-color);
+        --textfield-background-color: var(--theme-light-textfield-background-color);
+        --textfield-border-color: var(--theme-light-textfield-border-color);
+        --textfield-icon-color: var(--theme-light-textfield-icon-color);
+        --textfield-foreground-color-focused: var(--theme-light-textfield-foreground-color-focused);
+        --textfield-background-color-focused: var(--theme-light-textfield-background-color-focused);
+        --textfield-border-color-focused: var(--theme-light-textfield-border-color-focused);
+        --textfield-icon-color-focused: var(--theme-light-textfield-icon-color-focused);
+        --textfield-foreground-color-disabled: var(--theme-light-textfield-foreground-color-disabled);
+        --textfield-background-color-disabled: var(--theme-light-textfield-background-color-disabled);
+        --textfield-border-color-disabled: var(--theme-light-textfield-border-color-disabled);
+        --textfield-icon-color-disabled: var(--theme-light-textfield-icon-color-disabled);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --textfield-foreground-color: var(--theme-dark-textfield-foreground-color);
+        --textfield-background-color: var(--theme-dark-textfield-background-color);
+        --textfield-border-color: var(--theme-dark-textfield-border-color);
+        --textfield-icon-color: var(--theme-dark-textfield-icon-color);
+        --textfield-foreground-color-focused: var(--theme-dark-textfield-foreground-color-focused);
+        --textfield-background-color-focused: var(--theme-dark-textfield-background-color-focused);
+        --textfield-border-color-focused: var(--theme-dark-textfield-border-color-focused);
+        --textfield-icon-color-focused: var(--theme-dark-textfield-icon-color-focused);
+        --textfield-foreground-color-disabled: var(--theme-dark-textfield-foreground-color-disabled);
+        --textfield-background-color-disabled: var(--theme-dark-textfield-background-color-disabled);
+        --textfield-border-color-disabled: var(--theme-dark-textfield-border-color-disabled);
+        --textfield-icon-color-disabled: var(--theme-dark-textfield-icon-color-disabled);
+    }
+}

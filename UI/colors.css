@@ -1,0 +1,93 @@
+html {
+
+    --accent-color: hsl(266,100%,58%);
+    --accent-color-focused: hsl(266,100%,63%);
+    --accent-darken-color: hsl(266,65%,45%);
+    --accent-darken-color-focused: hsl(266,70%,50%);
+
+    --error-color: hsl(0,79%,50%);
+    --error-color-focused: hsl(0,79%,57%);
+    --warning-color: hsl(41,100%,50%);
+    --warning-color-focused: hsl(41,100%,57%);
+    --success-color: hsl(125,68%,44%);
+    --success-color-focused: hsl(125,68%,56%);
+
+    /* light theme */
+
+    --theme-light-color: hsl(0,0%,100%);
+    --theme-light-foreground-color: hsl(0,0%,0%);
+    --theme-light-background-color: hsl(0,0%,100%);
+    --theme-light-scrollbar-color: hsl(0,0%,80%);
+
+    /* dark theme */
+
+    --theme-dark-color: hsl(0,0%,0%);
+    --theme-dark-foreground-color: hsl(0,0%,100%);
+    --theme-dark-background-color: hsl(0,0%,12%);
+    --theme-dark-scrollbar-color: hsl(0,0%,27%);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+}
+
+a {
+    color: var(--accent-color);
+}
+
+a:hover, a:focus {
+    color: var(--accent-color-focused);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--background-color);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+::-webkit-scrollbar-track-piece {
+    background: var(--background-color);
+}
+
+.firefox, .firefox * {
+    scrollbar-color: var(--scrollbar-color) var(--background-color);
+}
+
+.theme--light {
+    --theme-color: var(--theme-light-color);
+    --foreground-color: var(--theme-light-foreground-color);
+    --background-color: var(--theme-light-background-color);
+    --scrollbar-color: var(--theme-light-scrollbar-color);
+}
+
+.theme--dark {
+    --theme-color: var(--theme-dark-color);
+    --foreground-color: var(--theme-dark-foreground-color);
+    --background-color: var(--theme-dark-background-color);
+    --scrollbar-color: var(--theme-dark-scrollbar-color);
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        --theme-color: var(--theme-light-color);
+        --foreground-color: var(--theme-light-foreground-color);
+        --background-color: var(--theme-light-background-color);
+        --scrollbar-color: var(--theme-light-scrollbar-color);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --theme-color: var(--theme-dark-color);
+        --foreground-color: var(--theme-dark-foreground-color);
+        --background-color: var(--theme-dark-background-color);
+        --scrollbar-color: var(--theme-dark-scrollbar-color);
+    }
+}

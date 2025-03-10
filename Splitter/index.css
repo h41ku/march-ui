@@ -1,0 +1,16 @@
+.splitter {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-color: var(--splitter-color);
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.splitter--horizontal {
+    height: 1px;
+}
+
+.splitter--vertical {
+    width: 1px;
+}

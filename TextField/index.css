@@ -1,0 +1,190 @@
+.textfield {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 24em;
+    box-sizing: border-box;
+    gap: 0.25em;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.textfield__field {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    min-height: 3em;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    border: 1px solid var(--textfield-border-color);
+    background-color: var(--textfield-background-color);
+    color: var(--textfield-foreground-color);
+}
+
+.textfield--readonly {
+    pointer-events: none;
+}
+
+.textfield--disabled {
+    pointer-events: none;
+}
+
+.textfield--disabled > .textfield__field {
+    border-color: var(--textfield-border-color-disabled);
+    background-color: var(--textfield-background-color-disabled);
+    color: var(--textfield-foreground-color-disabled);
+}
+
+.textfield--disabled .textfield__icon > *,
+.textfield--disabled .textfield__state > * {
+    color: var(--textfield-icon-color-disabled);
+}
+
+.textfield--focused > .textfield__field {
+    border-color: var(--textfield-border-color-focused);
+    background-color: var(--textfield-background-color-focused);
+    color: var(--textfield-foreground-color-focused);
+}
+
+.textfield--focused > .textfield__title {
+    opacity: 1;
+}
+
+.textfield--focused > .textfield__hint {
+    opacity: 0.75;
+}
+
+.textfield__icon,
+.textfield__state {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--textfield-icon-color);
+}
+
+.textfield__state {
+    display: none;
+}
+
+.textfield__icon > *,
+.textfield__state > * {
+    font-size: 1.5em;
+    color: inherit;
+}
+
+.textfield__input {
+    box-sizing: border-box;
+    width: 100%;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.textfield__input input {
+    display: block;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    cursor: text;
+}
+
+.textfield__input input::-webkit-contacts-auto-fill-button {
+    background-color: #fff;
+}
+
+.textfield__input input::-webkit-credentials-auto-fill-button {
+    background-color: #fff;
+}
+
+.textfield__hint {
+    font-size: 0.85em;
+    opacity: 0.5;
+    padding-left: 0.5em;
+}
+
+.textfield__hint--invisible {
+    display: none;
+}
+
+.textfield__title {
+    opacity: 0.75;
+}
+
+.textfield.textfield--required > .textfield__title::after {
+    content: '*';
+    color: var(--error-color);
+}
+
+.textfield__state--loading {
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-duration: 0.25s;
+    animation-timing-function: linear;
+}
+
+.textfield--valid .textfield__state--valid {
+    display: flex;
+    color: var(--success-color);
+}
+
+.textfield--invalid .textfield__state--invalid {
+    display: flex;
+    color: var(--error-color);
+}
+
+.textfield--loading .textfield__state--loading {
+    display: flex;
+}
+
+.textfield--valid .textfield__input,
+.textfield--valid .textfield__title,
+.textfield--valid .textfield__hint {
+    color: var(--success-color);
+}
+
+.textfield--valid .textfield__field {
+    border-color: var(--success-color);
+}
+
+.textfield--focused.textfield--valid .textfield__input,
+.textfield--focused.textfield--valid .textfield__title,
+.textfield--focused.textfield--valid .textfield__hint {
+    color: var(--success-color-focused);
+}
+
+.textfield--focused.textfield--valid .textfield__field {
+    border-color: var(--success-color-focused);
+}
+
+.textfield--invalid .textfield__input,
+.textfield--invalid .textfield__title,
+.textfield--invalid .textfield__hint {
+    color: var(--error-color);
+}
+
+.textfield.textfield--invalid .textfield__field {
+    border-color: var(--error-color);
+}
+
+.textfield--focused.textfield--invalid .textfield__input,
+.textfield--focused.textfield--invalid .textfield__title,
+.textfield--focused.textfield--invalid .textfield__hint {
+    color: var(--error-color-focused);
+}
+
+.textfield--focused.textfield.textfield--invalid .textfield__field {
+    border-color: var(--error-color-focused);
+}
+
+.textfield--focused .textfield__icon > svg {
+    color: var(--textfield-icon-color-focused);
+}

@@ -1,0 +1,152 @@
+html {
+
+    /* light theme */
+
+    --theme-light-button-foreground-color: var(--theme-light-foreground-color);
+    --theme-light-button-background-color: hsl(0,0%,92%);
+    --theme-light-button-border-color: hsl(0,0%,85%);
+    --theme-light-button-foreground-color-focused: var(--theme-light-foreground-color);
+    --theme-light-button-background-color-focused: hsl(0,0%,94%);
+    --theme-light-button-border-color-focused: hsl(0,0%,89%);
+    --theme-light-button-foreground-color-disabled: hsl(0,0%,65%);
+    --theme-light-button-background-color-disabled: hsl(0,0%,90%);
+    --theme-light-button-border-color-disabled: hsl(0,0%,90%);
+    --theme-light-button-primary-foreground-color: hsl(0,0%,100%);
+    --theme-light-button-primary-background-color: var(--accent-color);
+    --theme-light-button-primary-border-color: var(--accent-darken-color);
+    --theme-light-button-primary-foreground-color-focused: hsl(0,0%,100%);
+    --theme-light-button-primary-background-color-focused: var(--accent-color-focused);
+    --theme-light-button-primary-border-color-focused: var(--accent-darken-color-focused);
+    --theme-light-button-secondary-foreground-color: hsl(0,0%,99%);
+    --theme-light-button-secondary-background-color: hsl(0,0%,15%);
+    --theme-light-button-secondary-border-color: hsl(0,0%,40%);
+    --theme-light-button-secondary-foreground-color-focused: hsl(0,0%,100%);
+    --theme-light-button-secondary-background-color-focused: hsl(0,0%,1%);
+    --theme-light-button-secondary-border-color-focused: hsl(0,0%,35%);
+
+    /* dark theme */
+
+    --theme-dark-button-foreground-color: var(--theme-dark-foreground-color);
+    --theme-dark-button-background-color: hsl(0,0%,22%);
+    --theme-dark-button-border-color: hsl(0,0%,27%);
+    --theme-dark-button-foreground-color-focused: var(--theme-dark-foreground-color);
+    --theme-dark-button-background-color-focused: hsl(0,0%,25%);
+    --theme-dark-button-border-color-focused: hsl(0,0%,32%);
+    --theme-dark-button-foreground-color-disabled: hsl(0,0%,40%);
+    --theme-dark-button-background-color-disabled: hsl(0,0%,21%);
+    --theme-dark-button-border-color-disabled: hsl(0,0%,21%);
+    --theme-dark-button-primary-foreground-color: hsl(0,0%,100%);
+    --theme-dark-button-primary-background-color: var(--accent-color);
+    --theme-dark-button-primary-border-color: var(--accent-darken-color);
+    --theme-dark-button-primary-foreground-color-focused: hsl(0,0%,100%);
+    --theme-dark-button-primary-background-color-focused: var(--accent-color-focused);
+    --theme-dark-button-primary-border-color-focused: var(--accent-darken-color-focused);
+    --theme-dark-button-secondary-foreground-color: hsl(0,0%,2%);
+    --theme-dark-button-secondary-background-color: hsl(0,0%,92%);
+    --theme-dark-button-secondary-border-color: hsl(0,0%,75%);
+    --theme-dark-button-secondary-foreground-color-focused: hsl(0,0%,2%);
+    --theme-dark-button-secondary-background-color-focused: hsl(0,0%,99%);
+    --theme-dark-button-secondary-border-color-focused: hsl(0,0%,85%);
+}
+
+/* enable theming */
+
+.theme--light {
+    --button-foreground-color: var(--theme-light-button-foreground-color);
+    --button-background-color: var(--theme-light-button-background-color);
+    --button-border-color: var(--theme-light-button-border-color);
+    --button-foreground-color-focused: var(--theme-light-button-foreground-color-focused);
+    --button-background-color-focused: var(--theme-light-button-background-color-focused);
+    --button-border-color-focused: var(--theme-light-button-border-color-focused);
+    --button-foreground-color-disabled: var(--theme-light-button-foreground-color-disabled);
+    --button-background-color-disabled: var(--theme-light-button-background-color-disabled);
+    --button-border-color-disabled: var(--theme-light-button-border-color-disabled);
+    --button-primary-foreground-color: var(--theme-light-button-primary-foreground-color);
+    --button-primary-background-color: var(--theme-light-button-primary-background-color);
+    --button-primary-border-color: var(--theme-light-button-primary-border-color);
+    --button-primary-foreground-color-focused: var(--theme-light-button-primary-foreground-color-focused);
+    --button-primary-background-color-focused: var(--theme-light-button-primary-background-color-focused);
+    --button-primary-border-color-focused: var(--theme-light-button-primary-border-color-focused);
+    --button-secondary-foreground-color: var(--theme-light-button-secondary-foreground-color);
+    --button-secondary-background-color: var(--theme-light-button-secondary-background-color);
+    --button-secondary-border-color: var(--theme-light-button-secondary-border-color);
+    --button-secondary-foreground-color-focused: var(--theme-light-button-secondary-foreground-color-focused);
+    --button-secondary-background-color-focused: var(--theme-light-button-secondary-background-color-focused);
+    --button-secondary-border-color-focused: var(--theme-light-button-secondary-border-color-focused);
+}
+
+.theme--dark {
+    --button-foreground-color: var(--theme-dark-button-foreground-color);
+    --button-background-color: var(--theme-dark-button-background-color);
+    --button-border-color: var(--theme-dark-button-border-color);
+    --button-foreground-color-focused: var(--theme-dark-button-foreground-color-focused);
+    --button-background-color-focused: var(--theme-dark-button-background-color-focused);
+    --button-border-color-focused: var(--theme-dark-button-border-color-focused);
+    --button-foreground-color-disabled: var(--theme-dark-button-foreground-color-disabled);
+    --button-background-color-disabled: var(--theme-dark-button-background-color-disabled);
+    --button-border-color-disabled: var(--theme-dark-button-border-color-disabled);
+    --button-primary-foreground-color: var(--theme-dark-button-primary-foreground-color);
+    --button-primary-background-color: var(--theme-dark-button-primary-background-color);
+    --button-primary-border-color: var(--theme-dark-button-primary-border-color);
+    --button-primary-foreground-color-focused: var(--theme-dark-button-primary-foreground-color-focused);
+    --button-primary-background-color-focused: var(--theme-dark-button-primary-background-color-focused);
+    --button-primary-border-color-focused: var(--theme-dark-button-primary-border-color-focused);
+    --button-secondary-foreground-color: var(--theme-dark-button-secondary-foreground-color);
+    --button-secondary-background-color: var(--theme-dark-button-secondary-background-color);
+    --button-secondary-border-color: var(--theme-dark-button-secondary-border-color);
+    --button-secondary-foreground-color-focused: var(--theme-dark-button-secondary-foreground-color-focused);
+    --button-secondary-background-color-focused: var(--theme-dark-button-secondary-background-color-focused);
+    --button-secondary-border-color-focused: var(--theme-dark-button-secondary-border-color-focused);
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        --button-foreground-color: var(--theme-light-button-foreground-color);
+        --button-background-color: var(--theme-light-button-background-color);
+        --button-border-color: var(--theme-light-button-border-color);
+        --button-foreground-color-focused: var(--theme-light-button-foreground-color-focused);
+        --button-background-color-focused: var(--theme-light-button-background-color-focused);
+        --button-border-color-focused: var(--theme-light-button-border-color-focused);
+        --button-foreground-color-disabled: var(--theme-light-button-foreground-color-disabled);
+        --button-background-color-disabled: var(--theme-light-button-background-color-disabled);
+        --button-border-color-disabled: var(--theme-light-button-border-color-disabled);
+        --button-primary-foreground-color: var(--theme-light-button-primary-foreground-color);
+        --button-primary-background-color: var(--theme-light-button-primary-background-color);
+        --button-primary-border-color: var(--theme-light-button-primary-border-color);
+        --button-primary-foreground-color-focused: var(--theme-light-button-primary-foreground-color-focused);
+        --button-primary-background-color-focused: var(--theme-light-button-primary-background-color-focused);
+        --button-primary-border-color-focused: var(--theme-light-button-primary-border-color-focused);
+        --button-secondary-foreground-color: var(--theme-light-button-secondary-foreground-color);
+        --button-secondary-background-color: var(--theme-light-button-secondary-background-color);
+        --button-secondary-border-color: var(--theme-light-button-secondary-border-color);
+        --button-secondary-foreground-color-focused: var(--theme-light-button-secondary-foreground-color-focused);
+        --button-secondary-background-color-focused: var(--theme-light-button-secondary-background-color-focused);
+        --button-secondary-border-color-focused: var(--theme-light-button-secondary-border-color-focused);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --button-foreground-color: var(--theme-dark-button-foreground-color);
+        --button-background-color: var(--theme-dark-button-background-color);
+        --button-border-color: var(--theme-dark-button-border-color);
+        --button-foreground-color-focused: var(--theme-dark-button-foreground-color-focused);
+        --button-background-color-focused: var(--theme-dark-button-background-color-focused);
+        --button-border-color-focused: var(--theme-dark-button-border-color-focused);
+        --button-foreground-color-disabled: var(--theme-dark-button-foreground-color-disabled);
+        --button-background-color-disabled: var(--theme-dark-button-background-color-disabled);
+        --button-border-color-disabled: var(--theme-dark-button-border-color-disabled);
+        --button-primary-foreground-color: var(--theme-dark-button-primary-foreground-color);
+        --button-primary-background-color: var(--theme-dark-button-primary-background-color);
+        --button-primary-border-color: var(--theme-dark-button-primary-border-color);
+        --button-primary-foreground-color-focused: var(--theme-dark-button-primary-foreground-color-focused);
+        --button-primary-background-color-focused: var(--theme-dark-button-primary-background-color-focused);
+        --button-primary-border-color-focused: var(--theme-dark-button-primary-border-color-focused);
+        --button-secondary-foreground-color: var(--theme-dark-button-secondary-foreground-color);
+        --button-secondary-background-color: var(--theme-dark-button-secondary-background-color);
+        --button-secondary-border-color: var(--theme-dark-button-secondary-border-color);
+        --button-secondary-foreground-color-focused: var(--theme-dark-button-secondary-foreground-color-focused);
+        --button-secondary-background-color-focused: var(--theme-dark-button-secondary-background-color-focused);
+        --button-secondary-border-color-focused: var(--theme-dark-button-secondary-border-color-focused);
+    }
+}

@@ -1,0 +1,84 @@
+html {
+
+    /* light theme */
+
+    --theme-light-menuitem-foreground-color: hsl(0,0%,10%);
+    --theme-light-menuitem-background-color: inherit;
+    --theme-light-menuitem-foreground-color-selected: hsl(266,65%,45%);
+    --theme-light-menuitem-background-color-selected: hsla(266,100%,58%,0.2);
+    --theme-light-menuitem-foreground-color-hover: hsl(0,0%,0%);
+    --theme-light-menuitem-background-color-hover: hsl(0,0%,95%);
+    --theme-light-menuitem-foreground-color-selected-hover: hsl(266,65%,40%);
+    --theme-light-menuitem-background-color-selected-hover: hsla(266,100%,58%,0.25);
+    --theme-light-menuitem-foreground-color-disabled: hsl(0,0%,60%);
+    --theme-light-menuitem-background-color-disabled: inherit;
+
+    /* dark theme */
+
+    --theme-dark-menuitem-foreground-color: hsl(0,0%,90%);
+    --theme-dark-menuitem-background-color: inherit;
+    --theme-dark-menuitem-foreground-color-selected: hsl(266,100%,63%);
+    --theme-dark-menuitem-background-color-selected: hsla(266,100%,58%,0.2);
+    --theme-dark-menuitem-foreground-color-hover: hsl(0,0%,100%);
+    --theme-dark-menuitem-background-color-hover: hsl(0,0%,22%);
+    --theme-dark-menuitem-foreground-color-selected-hover: hsl(266,100%,68%);
+    --theme-dark-menuitem-background-color-selected-hover: hsla(266,100%,58%,0.25);
+    --theme-dark-menuitem-foreground-color-disabled: hsl(0,0%,50%);
+    --theme-dark-menuitem-background-color-disabled: inherit;
+}
+
+.theme--light {
+    --menuitem-foreground-color: var(--theme-light-menuitem-foreground-color);
+    --menuitem-background-color: var(--theme-light-menuitem-background-color);
+    --menuitem-foreground-color-selected: var(--theme-light-menuitem-foreground-color-selected);
+    --menuitem-background-color-selected: var(--theme-light-menuitem-background-color-selected);
+    --menuitem-foreground-color-hover: var(--theme-light-menuitem-foreground-color-hover);
+    --menuitem-background-color-hover: var(--theme-light-menuitem-background-color-hover);
+    --menuitem-foreground-color-selected-hover: var(--theme-light-menuitem-foreground-color-selected-hover);
+    --menuitem-background-color-selected-hover: var(--theme-light-menuitem-background-color-selected-hover);
+    --menuitem-foreground-color-disabled: var(--theme-light-menuitem-foreground-color-disabled);
+    --menuitem-background-color-disabled: var(--theme-light-menuitem-background-color-disabled);
+}
+
+.theme--dark {
+    --menuitem-foreground-color: var(--theme-dark-menuitem-foreground-color);
+    --menuitem-background-color: var(--theme-dark-menuitem-background-color);
+    --menuitem-foreground-color-selected: var(--theme-dark-menuitem-foreground-color-selected);
+    --menuitem-background-color-selected: var(--theme-dark-menuitem-background-color-selected);
+    --menuitem-foreground-color-hover: var(--theme-dark-menuitem-foreground-color-hover);
+    --menuitem-background-color-hover: var(--theme-dark-menuitem-background-color-hover);
+    --menuitem-foreground-color-selected-hover: var(--theme-dark-menuitem-foreground-color-selected-hover);
+    --menuitem-background-color-selected-hover: var(--theme-dark-menuitem-background-color-selected-hover);
+    --menuitem-foreground-color-disabled: var(--theme-dark-menuitem-foreground-color-disabled);
+    --menuitem-background-color-disabled: var(--theme-dark-menuitem-background-color-disabled);
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        --menuitem-foreground-color: var(--theme-light-menuitem-foreground-color);
+        --menuitem-background-color: var(--theme-light-menuitem-background-color);
+        --menuitem-foreground-color-selected: var(--theme-light-menuitem-foreground-color-selected);
+        --menuitem-background-color-selected: var(--theme-light-menuitem-background-color-selected);
+        --menuitem-foreground-color-hover: var(--theme-light-menuitem-foreground-color-hover);
+        --menuitem-background-color-hover: var(--theme-light-menuitem-background-color-hover);
+        --menuitem-foreground-color-selected-hover: var(--theme-light-menuitem-foreground-color-selected-hover);
+        --menuitem-background-color-selected-hover: var(--theme-light-menuitem-background-color-selected-hover);
+        --menuitem-foreground-color-disabled: var(--theme-light-menuitem-foreground-color-disabled);
+        --menuitem-background-color-disabled: var(--theme-light-menuitem-background-color-disabled);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --menuitem-foreground-color: var(--theme-dark-menuitem-foreground-color);
+        --menuitem-background-color: var(--theme-dark-menuitem-background-color);
+        --menuitem-foreground-color-selected: var(--theme-dark-menuitem-foreground-color-selected);
+        --menuitem-background-color-selected: var(--theme-dark-menuitem-background-color-selected);
+        --menuitem-foreground-color-hover: var(--theme-dark-menuitem-foreground-color-hover);
+        --menuitem-background-color-hover: var(--theme-dark-menuitem-background-color-hover);
+        --menuitem-foreground-color-selected-hover: var(--theme-dark-menuitem-foreground-color-selected-hover);
+        --menuitem-background-color-selected-hover: var(--theme-dark-menuitem-background-color-selected-hover);
+        --menuitem-foreground-color-disabled: var(--theme-dark-menuitem-foreground-color-disabled);
+        --menuitem-background-color-disabled: var(--theme-dark-menuitem-background-color-disabled);
+    }
+}
