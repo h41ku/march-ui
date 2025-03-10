@@ -65,7 +65,7 @@ const App = () => {
 m.mount(document.getElementById('app'), App)
 ```
 
-Transpile `index.js` into `dist/index.js` and `dist/index.css` files,
+Transpile `index.jsx` into `dist/index.js` and `dist/index.css` files,
 for example, using `esbuild`:
 
 ```sh
