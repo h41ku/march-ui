@@ -6,8 +6,6 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "dev": "esbuild __examples__/index.jsx --bundle --outdir=__examples__/dist --jsx-factory=m --jsx-fragment='\"[\"' --watch",
-    "build": "esbuild __examples__/index.jsx --bundle --minify --outdir=__examples__/dist --jsx-factory=m --jsx-fragment='\"[\"'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
