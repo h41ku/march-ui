@@ -1,6 +1,6 @@
 {
   "name": "march-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Lightweight UI-kit for Mithril.js",
   "type": "module",
   "main": "index.js",
