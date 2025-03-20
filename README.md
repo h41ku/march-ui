@@ -77,16 +77,18 @@ Now open `index.html` in your favorite browser.
 
 ## Components
 
-- UI
-- Icon
-- Button
-- TextField
-- ContextMenu
-- MenuItem
-- Splitter
-- ThemeToggler
-- Form
-- Notice
+- `UI`
+- `Icon`
+- `Button`
+- `TextField`
+- `ContextMenu`
+- `MenuItem`
+- `Splitter`
+- `ThemeToggler`
+- `Form`
+- `Notice`
+- `Tabs`
+- `Tab`
 
 ## License
 

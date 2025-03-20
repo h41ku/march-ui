@@ -1,0 +1,54 @@
+html {
+
+    /* light theme */
+
+    --theme-light-tabs-background-color: hsl(0,0%,98%);
+    --theme-light-tabs-border-color: hsl(0,0%,80%);
+    --theme-light-tabs-active-background-color: hsl(0,0%,100%);
+    --theme-light-tabs-active-shadow-color: hsla(0,0%,0%,0.2);
+    --theme-light-tabs-active-text-color: var(--theme-light-accent-color);
+
+    /* dark theme */
+
+    --theme-dark-tabs-background-color: hsl(0,0%,16%);
+    --theme-dark-tabs-border-color: hsl(0,0%,25%);
+    --theme-dark-tabs-active-background-color: hsl(0,0%,9%);
+    --theme-dark-tabs-active-shadow-color: hsla(0,0%,0%,0.2);
+    --theme-dark-tabs-active-text-color: var(--theme-dark-accent-color);
+}
+
+.theme--light {
+    --tabs-background-color: var(--theme-light-tabs-background-color);
+    --tabs-border-color: var(--theme-light-tabs-border-color);
+    --tabs-active-background-color: var(--theme-light-tabs-active-background-color);
+    --tabs-active-shadow-color: var(--theme-light-tabs-active-shadow-color);
+    --tabs-active-text-color: var(--theme-light-tabs-active-text-color);
+}
+
+.theme--dark {
+    --tabs-background-color: var(--theme-dark-tabs-background-color);
+    --tabs-border-color: var(--theme-dark-tabs-border-color);
+    --tabs-active-background-color: var(--theme-dark-tabs-active-background-color);
+    --tabs-active-shadow-color: var(--theme-dark-tabs-active-shadow-color);
+    --tabs-active-text-color: var(--theme-dark-tabs-active-text-color);
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        --tabs-background-color: var(--theme-light-tabs-background-color);
+        --tabs-border-color: var(--theme-light-tabs-border-color);
+        --tabs-active-background-color: var(--theme-light-tabs-active-background-color);
+        --tabs-active-shadow-color: var(--theme-light-tabs-active-shadow-color);
+        --tabs-active-text-color: var(--theme-light-tabs-active-text-color);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --tabs-background-color: var(--theme-dark-tabs-background-color);
+        --tabs-border-color: var(--theme-dark-tabs-border-color);
+        --tabs-active-background-color: var(--theme-dark-tabs-active-background-color);
+        --tabs-active-shadow-color: var(--theme-dark-tabs-active-shadow-color);
+        --tabs-active-text-color: var(--theme-dark-tabs-active-text-color);
+    }
+}
