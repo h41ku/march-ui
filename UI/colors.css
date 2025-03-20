@@ -1,10 +1,6 @@
 html {
 
-    --accent-color: hsl(266,100%,58%);
-    --accent-color-focused: hsl(266,100%,63%);
-    --accent-darken-color: hsl(266,65%,45%);
-    --accent-darken-color-focused: hsl(266,70%,50%);
-
+    
     --error-color: hsl(0,79%,50%);
     --error-color-focused: hsl(0,79%,57%);
     --warning-color: hsl(41,100%,50%);
@@ -14,12 +10,22 @@ html {
 
     /* light theme */
 
+    --theme-light-accent-color: hsl(266,100%,58%);
+    --theme-light-accent-color-focused: hsl(266,100%,63%);
+    --theme-light-accent-darken-color: hsl(266,65%,45%);
+    --theme-light-accent-darken-color-focused: hsl(266,70%,50%);
+
     --theme-light-color: hsl(0,0%,100%);
     --theme-light-foreground-color: hsl(0,0%,0%);
     --theme-light-background-color: hsl(0,0%,100%);
     --theme-light-scrollbar-color: hsl(0,0%,80%);
 
     /* dark theme */
+
+    --theme-dark-accent-color: hsl(266,75%,62%);
+    --theme-dark-accent-color-focused: hsl(266,100%,63%);
+    --theme-dark-accent-darken-color: hsl(266,65%,45%);
+    --theme-dark-accent-darken-color-focused: hsl(266,70%,50%);
 
     --theme-dark-color: hsl(0,0%,0%);
     --theme-dark-foreground-color: hsl(0,0%,100%);
@@ -61,6 +67,10 @@ a:hover, a:focus {
 }
 
 .theme--light {
+    --accent-color: var(--theme-light-accent-color);
+    --accent-color-focused: var(--theme-light-accent-color-focused);
+    --accent-darken-color: var(--theme-light-accent-darken-color);
+    --accent-darken-color-focused: var(--theme-light-accent-darken-color-focused);
     --theme-color: var(--theme-light-color);
     --foreground-color: var(--theme-light-foreground-color);
     --background-color: var(--theme-light-background-color);
@@ -68,6 +78,10 @@ a:hover, a:focus {
 }
 
 .theme--dark {
+    --accent-color: var(--theme-dark-accent-color);
+    --accent-color-focused: var(--theme-dark-accent-color-focused);
+    --accent-darken-color: var(--theme-dark-accent-darken-color);
+    --accent-darken-color-focused: var(--theme-dark-accent-darken-color-focused);
     --theme-color: var(--theme-dark-color);
     --foreground-color: var(--theme-dark-foreground-color);
     --background-color: var(--theme-dark-background-color);
@@ -76,6 +90,10 @@ a:hover, a:focus {
 
 @media (prefers-color-scheme: light) {
     html {
+        --accent-color: var(--theme-light-accent-color);
+        --accent-color-focused: var(--theme-light-accent-color-focused);
+        --accent-darken-color: var(--theme-light-accent-darken-color);
+        --accent-darken-color-focused: var(--theme-light-accent-darken-color-focused);
         --theme-color: var(--theme-light-color);
         --foreground-color: var(--theme-light-foreground-color);
         --background-color: var(--theme-light-background-color);
@@ -85,6 +103,10 @@ a:hover, a:focus {
 
 @media (prefers-color-scheme: dark) {
     html {
+        --accent-color: var(--theme-dark-accent-color);
+        --accent-color-focused: var(--theme-dark-accent-color-focused);
+        --accent-darken-color: var(--theme-dark-accent-darken-color);
+        --accent-darken-color-focused: var(--theme-dark-accent-darken-color-focused);
         --theme-color: var(--theme-dark-color);
         --foreground-color: var(--theme-dark-foreground-color);
         --background-color: var(--theme-dark-background-color);
