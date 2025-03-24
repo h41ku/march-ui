@@ -4,11 +4,11 @@ html {
 
     --theme-light-menuitem-foreground-color: hsl(0,0%,10%);
     --theme-light-menuitem-background-color: inherit;
-    --theme-light-menuitem-foreground-color-selected: hsl(266,65%,45%);
+    --theme-light-menuitem-foreground-color-selected: var(--theme-light-accent-color-focused);
     --theme-light-menuitem-background-color-selected: hsla(266,100%,58%,0.2);
     --theme-light-menuitem-foreground-color-hover: hsl(0,0%,0%);
     --theme-light-menuitem-background-color-hover: hsl(0,0%,95%);
-    --theme-light-menuitem-foreground-color-selected-hover: hsl(266,65%,40%);
+    --theme-light-menuitem-foreground-color-selected-hover: var(--theme-light-accent-color);
     --theme-light-menuitem-background-color-selected-hover: hsla(266,100%,58%,0.25);
     --theme-light-menuitem-foreground-color-disabled: hsl(0,0%,60%);
     --theme-light-menuitem-background-color-disabled: inherit;
@@ -17,11 +17,11 @@ html {
 
     --theme-dark-menuitem-foreground-color: hsl(0,0%,90%);
     --theme-dark-menuitem-background-color: inherit;
-    --theme-dark-menuitem-foreground-color-selected: hsl(266,100%,63%);
+    --theme-dark-menuitem-foreground-color-selected: var(--theme-dark-accent-color);
     --theme-dark-menuitem-background-color-selected: hsla(266,100%,58%,0.2);
     --theme-dark-menuitem-foreground-color-hover: hsl(0,0%,100%);
     --theme-dark-menuitem-background-color-hover: hsl(0,0%,22%);
-    --theme-dark-menuitem-foreground-color-selected-hover: hsl(266,100%,68%);
+    --theme-dark-menuitem-foreground-color-selected-hover: var(--theme-dark-accent-color-focused);
     --theme-dark-menuitem-background-color-selected-hover: hsla(266,100%,58%,0.25);
     --theme-dark-menuitem-foreground-color-disabled: hsl(0,0%,50%);
     --theme-dark-menuitem-background-color-disabled: inherit;

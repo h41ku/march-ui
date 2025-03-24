@@ -11,7 +11,7 @@ html {
     /* light theme */
 
     --theme-light-accent-color: hsl(266,100%,58%);
-    --theme-light-accent-color-focused: hsl(266,100%,63%);
+    --theme-light-accent-color-focused: hsl(266,100%,66%);
     --theme-light-accent-darken-color: hsl(266,65%,45%);
     --theme-light-accent-darken-color-focused: hsl(266,70%,50%);
 
@@ -22,8 +22,8 @@ html {
 
     /* dark theme */
 
-    --theme-dark-accent-color: hsl(266,75%,62%);
-    --theme-dark-accent-color-focused: hsl(266,100%,63%);
+    --theme-dark-accent-color: hsl(266,100%,75%);
+    --theme-dark-accent-color-focused: hsl(266,100%,82%);
     --theme-dark-accent-darken-color: hsl(266,65%,45%);
     --theme-dark-accent-darken-color-focused: hsl(266,70%,50%);
 

@@ -3,18 +3,18 @@ html {
     /* light theme */
 
     --theme-light-tabs-background-color: hsl(0,0%,98%);
-    --theme-light-tabs-border-color: hsl(0,0%,80%);
+    --theme-light-tabs-border-color: hsl(0,0%,85%);
     --theme-light-tabs-active-background-color: hsl(0,0%,100%);
-    --theme-light-tabs-active-shadow-color: hsla(0,0%,0%,0.2);
-    --theme-light-tabs-active-text-color: var(--theme-light-accent-color);
+    --theme-light-tabs-active-shadow-color: hsla(0,0%,0%,0.3);
+    --theme-light-tabs-active-text-color: var(--theme-light-accent-color-focused);
 
     /* dark theme */
 
-    --theme-dark-tabs-background-color: hsl(0,0%,16%);
-    --theme-dark-tabs-border-color: hsl(0,0%,25%);
-    --theme-dark-tabs-active-background-color: hsl(0,0%,9%);
-    --theme-dark-tabs-active-shadow-color: hsla(0,0%,0%,0.2);
-    --theme-dark-tabs-active-text-color: var(--theme-dark-accent-color);
+    --theme-dark-tabs-background-color: hsl(0,0%,22%);
+    --theme-dark-tabs-border-color: hsl(0,0%,16%);
+    --theme-dark-tabs-active-background-color: hsl(0,0%,32%);
+    --theme-dark-tabs-active-shadow-color: hsla(0,0%,0%,0.4);
+    --theme-dark-tabs-active-text-color: var(--theme-dark-accent-color-focused);
 }
 
 .theme--light {
