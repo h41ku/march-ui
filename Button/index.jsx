@@ -8,6 +8,7 @@ const Button = () => {
             const {
                 icon, title, state,
                 wide, volume, view,
+                formRef,
                 ...attributes
             } = attrs
             const classes = classNames('button', {

@@ -101,7 +101,15 @@ const TextField = ({ attrs }) => {
         validateInput(evt.target)
         return result
     }
+    const subscriptions = {}
+    const onFormValid = () => {
+        state = 'valid'
+    }
     return {
+        onremove() {
+            Object.values(subscriptions)
+                .forEach(unsubscribe => unsubscribe())
+        },
         onupdate({ dom }) {
             const inputElement = dom.querySelector('input')
             if (state === 'valid') {
@@ -119,6 +127,7 @@ const TextField = ({ attrs }) => {
                 validate: validateNext, pattern,
                 placeholder: placeholderDropped,
                 state: stateNext,
+                formRef,
                 ...rest
             } = {
                 ...defaultAttributes,
@@ -150,6 +159,9 @@ const TextField = ({ attrs }) => {
                 ...(readonly ? { readonly } : {}),
                 ...(disabled ? { disabled } : {}),
                 ...rest
+            }
+            if (formRef) {
+                subscriptions.formValid = formRef.subscribe('formValid', onFormValid)
             }
             return (
                 <label class={classes}>

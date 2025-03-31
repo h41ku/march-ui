@@ -11,13 +11,30 @@ const defaultAttributes = {
 }
 
 const Form = ({ attrs }) => {
-    let { submit, beforeSubmit, afterSubmit, onerror, reportValidity } = { ...defaultAttributes, ...attrs }
+    let { submit, beforeSubmit, afterSubmit, onerror/*, reportValidity*/ } = { ...defaultAttributes, ...attrs }
     let isPending
+    const eventListeners = new Map()
+    const dispatch = (eventName) => {
+        const listeners = eventListeners.get(eventName)
+        if (listeners)
+            for (let listener of listeners.values())
+                listener()
+    }
+    const formRef = {
+        subscribe: (eventName, listener) => {
+            if (!eventListeners.has(eventName))
+                eventListeners.set(eventName, new Set())
+            const listeners = eventListeners.get(eventName)
+            listeners.add(listener)
+            return () => listeners.delete(listener)
+        }
+    }
     let onsubmit = evt => {
         const formElement = evt.target
         if (!formElement.checkValidity()) {
             formElement.reportValidity()
         } else {
+            dispatch('formValid')
             isPending = false
             beforeSubmit(evt)
             Promise
@@ -49,7 +66,11 @@ const Form = ({ attrs }) => {
                         <div class="form__title">{title}</div>
                     </div>
                     <div class="form__body">
-                        {children}
+                        {children.map(vnode => {
+                            if (vnode && vnode.attrs)
+                                vnode.attrs.formRef = formRef
+                            return vnode
+                        })}
                     </div>
                 </form>
             )
