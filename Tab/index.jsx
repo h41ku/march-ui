@@ -1,10 +1,15 @@
-const Tab = () => {
+const Tab = ({ attrs }) => {
     return {
-        view({ children }) {
+        view({ attrs, children }) {
+            const { key, title, ...attributes } = attrs
             return (
-                <div class="tab">
-                    {children}
-                </div>
+                <>
+                    {children.map(vnode => {
+                        if (vnode && vnode.attrs)
+                            vnode.attrs = { ...vnode.attrs, ...attributes }
+                        return vnode
+                    })}
+                </>
             )
         }
     }
