@@ -50,7 +50,13 @@ const Form = ({ attrs }) => {
     }
     return {
         view({ attrs, children }) {
-            const { icon, title, onsubmit: onsubmitNext, ...attributes } = {
+            const {
+                icon,
+                title,
+                onsubmit: onsubmitNext,
+                submit, beforeSubmit, afterSubmit, onerror, // internal usage only
+                ...attributes
+            } = {
                 method: 'POST',
                 enctype: 'multipart/form-data',
                 ...attrs
