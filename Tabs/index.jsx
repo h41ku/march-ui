@@ -1,6 +1,7 @@
 import './index.css'
 import './colors.css'
 import classNames from 'classnames'
+import Tab from '../Tab'
 
 const Tabs = ({ attrs }) => {
     let { active } = attrs
@@ -11,7 +12,7 @@ const Tabs = ({ attrs }) => {
     }
     return {
         view({ attrs: { active: activeNext, onchange, ...attributes }, children }) {
-            const tabs = children.filter(({ tag: { name } }) => name === 'Tab')
+            const tabs = children.filter(({ tag }) => tag === Tab)
                 .map((tab, i) => {
                     const { key, attrs: { title } } = tab
                     tab.attrs = { ...tab.attrs, ...attributes }
