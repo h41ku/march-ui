@@ -1,0 +1,96 @@
+html {
+
+    /* light theme */
+
+    --theme-light-select-foreground-color: var(--theme-light-foreground-color);
+    --theme-light-select-background-color: hsl(0,0%,95%);
+    --theme-light-select-border-color: hsl(0,0%,60%);
+    --theme-light-select-icon-color: hsl(0,0%,50%);
+    --theme-light-select-foreground-color-focused: var(--theme-light-foreground-color);
+    --theme-light-select-background-color-focused: hsl(0,0%,97%);
+    --theme-light-select-border-color-focused: hsl(0,0%,27%);
+    --theme-light-select-icon-color-focused: hsl(0,0%,25%);
+    --theme-light-select-foreground-color-disabled: hsl(0,0%,60%);
+    --theme-light-select-background-color-disabled: hsl(0,0%,97%);
+    --theme-light-select-border-color-disabled: hsl(0,0%,85%);
+    --theme-light-select-icon-color-disabled: hsl(0,0%,65%);
+
+    /* dark theme */
+
+    --theme-dark-select-foreground-color: var(--theme-dark-foreground-color);
+    --theme-dark-select-background-color: hsl(0,0%,16%);
+    --theme-dark-select-border-color: hsl(0,0%,33%);
+    --theme-dark-select-icon-color: hsl(0,0%,50%);
+    --theme-dark-select-foreground-color-focused: var(--theme-dark-foreground-color);
+    --theme-dark-select-background-color-focused: hsl(0,0%,18%);
+    --theme-dark-select-border-color-focused: hsl(0,0%,47%);
+    --theme-dark-select-icon-color-focused: hsl(0,0%,75%);
+    --theme-dark-select-foreground-color-disabled: hsl(0,0%,50%);
+    --theme-dark-select-background-color-disabled: hsl(0,0%,18%);
+    --theme-dark-select-border-color-disabled: hsl(0,0%,25%);
+    --theme-dark-select-icon-color-disabled: hsl(0,0%,30%);
+}
+
+.theme--light {
+    --select-foreground-color: var(--theme-light-select-foreground-color);
+    --select-background-color: var(--theme-light-select-background-color);
+    --select-border-color: var(--theme-light-select-border-color);
+    --select-icon-color: var(--theme-light-select-icon-color);
+    --select-foreground-color-focused: var(--theme-light-select-foreground-color-focused);
+    --select-background-color-focused: var(--theme-light-select-background-color-focused);
+    --select-border-color-focused: var(--theme-light-select-border-color-focused);
+    --select-icon-color-focused: var(--theme-light-select-icon-color-focused);
+    --select-foreground-color-disabled: var(--theme-light-select-foreground-color-disabled);
+    --select-background-color-disabled: var(--theme-light-select-background-color-disabled);
+    --select-border-color-disabled: var(--theme-light-select-border-color-disabled);
+    --select-icon-color-disabled: var(--theme-light-select-icon-color-disabled);
+}
+
+.theme--dark {
+    --select-foreground-color: var(--theme-dark-select-foreground-color);
+    --select-background-color: var(--theme-dark-select-background-color);
+    --select-border-color: var(--theme-dark-select-border-color);
+    --select-icon-color: var(--theme-dark-select-icon-color);
+    --select-foreground-color-focused: var(--theme-dark-select-foreground-color-focused);
+    --select-background-color-focused: var(--theme-dark-select-background-color-focused);
+    --select-border-color-focused: var(--theme-dark-select-border-color-focused);
+    --select-icon-color-focused: var(--theme-dark-select-icon-color-focused);
+    --select-foreground-color-disabled: var(--theme-dark-select-foreground-color-disabled);
+    --select-background-color-disabled: var(--theme-dark-select-background-color-disabled);
+    --select-border-color-disabled: var(--theme-dark-select-border-color-disabled);
+    --select-icon-color-disabled: var(--theme-dark-select-icon-color-disabled);
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        --select-foreground-color: var(--theme-light-select-foreground-color);
+        --select-background-color: var(--theme-light-select-background-color);
+        --select-border-color: var(--theme-light-select-border-color);
+        --select-icon-color: var(--theme-light-select-icon-color);
+        --select-foreground-color-focused: var(--theme-light-select-foreground-color-focused);
+        --select-background-color-focused: var(--theme-light-select-background-color-focused);
+        --select-border-color-focused: var(--theme-light-select-border-color-focused);
+        --select-icon-color-focused: var(--theme-light-select-icon-color-focused);
+        --select-foreground-color-disabled: var(--theme-light-select-foreground-color-disabled);
+        --select-background-color-disabled: var(--theme-light-select-background-color-disabled);
+        --select-border-color-disabled: var(--theme-light-select-border-color-disabled);
+        --select-icon-color-disabled: var(--theme-light-select-icon-color-disabled);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --select-foreground-color: var(--theme-dark-select-foreground-color);
+        --select-background-color: var(--theme-dark-select-background-color);
+        --select-border-color: var(--theme-dark-select-border-color);
+        --select-icon-color: var(--theme-dark-select-icon-color);
+        --select-foreground-color-focused: var(--theme-dark-select-foreground-color-focused);
+        --select-background-color-focused: var(--theme-dark-select-background-color-focused);
+        --select-border-color-focused: var(--theme-dark-select-border-color-focused);
+        --select-icon-color-focused: var(--theme-dark-select-icon-color-focused);
+        --select-foreground-color-disabled: var(--theme-dark-select-foreground-color-disabled);
+        --select-background-color-disabled: var(--theme-dark-select-background-color-disabled);
+        --select-border-color-disabled: var(--theme-dark-select-border-color-disabled);
+        --select-icon-color-disabled: var(--theme-dark-select-icon-color-disabled);
+    }
+}

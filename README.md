@@ -81,6 +81,7 @@ Now open `index.html` in your favorite browser.
 - `Icon`
 - `Button`
 - `TextField`
+- `Select`
 - `ContextMenu`
 - `MenuItem`
 - `Splitter`

@@ -1,0 +1,192 @@
+.select {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 24em;
+    box-sizing: border-box;
+    gap: 0.25em;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.select__field {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    min-height: 3em;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    border: 1px solid var(--select-border-color);
+    background-color: var(--select-background-color);
+    color: var(--select-foreground-color);
+}
+
+.select--readonly {
+    pointer-events: none;
+}
+
+.select--disabled {
+    pointer-events: none;
+}
+
+.select--disabled > .select__field {
+    border-color: var(--select-border-color-disabled);
+    background-color: var(--select-background-color-disabled);
+    color: var(--select-foreground-color-disabled);
+}
+
+.select--disabled .select__icon > *,
+.select--disabled .select__state > * {
+    color: var(--select-icon-color-disabled);
+}
+
+.select--focused > .select__field {
+    border-color: var(--select-border-color-focused);
+    background-color: var(--select-background-color-focused);
+    color: var(--select-foreground-color-focused);
+}
+
+.select--focused > .select__title {
+    opacity: 1;
+}
+
+.select--focused > .select__hint {
+    opacity: 0.75;
+}
+
+.select__icon,
+.select__state {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--select-icon-color);
+}
+
+.select__state {
+    display: none;
+}
+
+.select__icon > *,
+.select__state > * {
+    font-size: 1.5em;
+    color: inherit;
+}
+
+.select__input {
+    box-sizing: border-box;
+    width: 100%;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.select__input select {
+    display: block;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    cursor: text;
+}
+
+.select__input option {
+    color: var(--select-foreground-color);
+    background-color: var(--select-background-color);
+}
+
+.select__input option[selected], .select__input option[selected]:hover {
+    color: var(--select-foreground-color-focused);
+    background-color: var(--select-background-color-focused);
+}
+
+.select__hint {
+    font-size: 0.85em;
+    opacity: 0.5;
+    padding-left: 0.5em;
+}
+
+.select__hint--invisible {
+    display: none;
+}
+
+.select__title {
+    opacity: 0.75;
+}
+
+.select.select--required > .select__title::after {
+    content: '*';
+    color: var(--error-color);
+}
+
+.select__state--loading {
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-duration: 0.25s;
+    animation-timing-function: linear;
+}
+
+.select--valid .select__state--valid {
+    display: flex;
+    color: var(--success-color);
+}
+
+.select--invalid .select__state--invalid {
+    display: flex;
+    color: var(--error-color);
+}
+
+.select--loading .select__state--loading {
+    display: flex;
+}
+
+.select--valid .select__input,
+.select--valid .select__title,
+.select--valid .select__hint {
+    color: var(--success-color);
+}
+
+.select--valid .select__field {
+    border-color: var(--success-color);
+}
+
+.select--focused.select--valid .select__input,
+.select--focused.select--valid .select__title,
+.select--focused.select--valid .select__hint {
+    color: var(--success-color-focused);
+}
+
+.select--focused.select--valid .select__field {
+    border-color: var(--success-color-focused);
+}
+
+.select--invalid .select__input,
+.select--invalid .select__title,
+.select--invalid .select__hint {
+    color: var(--error-color);
+}
+
+.select.select--invalid .select__field {
+    border-color: var(--error-color);
+}
+
+.select--focused.select--invalid .select__input,
+.select--focused.select--invalid .select__title,
+.select--focused.select--invalid .select__hint {
+    color: var(--error-color-focused);
+}
+
+.select--focused.select.select--invalid .select__field {
+    border-color: var(--error-color-focused);
+}
+
+.select--focused .select__icon > svg {
+    color: var(--select-icon-color-focused);
+}

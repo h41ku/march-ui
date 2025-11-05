@@ -73,6 +73,7 @@
 }
 
 .form__body .textfield,
+.form__body .select,
 .form__body .button,
 .form__body .notice {
     max-width: none;
