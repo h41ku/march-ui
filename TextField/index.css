@@ -105,6 +105,13 @@
     background-color: #fff;
 }
 
+.textfield__input input:-webkit-autofill,
+.textfield__input input:-webkit-autofill:hover,
+.textfield__input input:-webkit-autofill:focus,
+.textfield__input input:-webkit-autofill:active {
+    -webkit-background-clip: text !important;
+}
+
 .textfield__hint {
     font-size: 0.85em;
     opacity: 0.5;
