@@ -107,6 +107,14 @@
     background-color: var(--select-background-color-focused);
 }
 
+.select__input select:-webkit-autofill,
+.select__input select:-webkit-autofill:hover,
+.select__input select:-webkit-autofill:focus,
+.select__input select:-webkit-autofill:active {
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: var(--accent-color);
+}
+
 .select__hint {
     font-size: 0.85em;
     opacity: 0.5;
