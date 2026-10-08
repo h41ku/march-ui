@@ -5,6 +5,12 @@ import Tab from '../Tab'
 
 const Tabs = ({ attrs }) => {
     let { active } = attrs
+    /**
+     * 
+     * @param {unknown} key 
+     * @param {() => void | undefined} onchange 
+     * @returns 
+     */
     const switchTab = (key, onchange) => () => {
         active = key
         if (onchange)
@@ -13,7 +19,7 @@ const Tabs = ({ attrs }) => {
     return {
         view({ attrs: { active: activeNext, onchange, ...attributes }, children }) {
             const tabs = children.filter(({ tag }) => tag === Tab)
-                .map((tab, i) => {
+                .map(/** @type {(tab: import('../Component').VNode, i: number) => { key: unknown, title: unknown, tab: import('../Component').VNode }} */ (tab, i) => {
                     const { key, attrs: { title } } = tab
                     tab.attrs = { ...tab.attrs, ...attributes }
                     return { key: key === undefined ? i : key, title, tab }
@@ -27,7 +33,7 @@ const Tabs = ({ attrs }) => {
                 <div class={classes}>
                     <div class="tabs__list">
                         <div class="tabs__switch">
-                            {tabs.map(({ key, title }, i) => {
+                            {tabs.map(/** @type {(tab: { key: unknown, title: unknown, tab: import('../Component').VNode }, i: number) => import('../Component').VNode} */ ({ key, title }, i) => {
                                 return <div class={classNames('tab__title', {
                                     'tab__title--active': i === activeIndex
                                 })} onclick={switchTab(key, onchange)}>{title}</div>

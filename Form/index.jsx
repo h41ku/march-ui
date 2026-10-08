@@ -14,6 +14,11 @@ const Form = ({ attrs }) => {
     let { submit, beforeSubmit, afterSubmit, onerror/*, reportValidity*/ } = { ...defaultAttributes, ...attrs }
     let isPending
     const eventListeners = new Map()
+    /**
+     * 
+     * @param {string} eventName 
+     * @returns {void}
+     */
     const dispatch = (eventName) => {
         const listeners = eventListeners.get(eventName)
         if (listeners)
@@ -21,6 +26,12 @@ const Form = ({ attrs }) => {
                 listener()
     }
     const formRef = {
+        /**
+         * 
+         * @param {string} eventName 
+         * @param {() => void} listener 
+         * @returns {() => void}
+         */
         subscribe: (eventName, listener) => {
             if (!eventListeners.has(eventName))
                 eventListeners.set(eventName, new Set())
@@ -29,8 +40,12 @@ const Form = ({ attrs }) => {
             return () => listeners.delete(listener)
         }
     }
+    /**
+     * @param {Event} evt 
+     * @returns 
+     */
     let onsubmit = evt => {
-        const formElement = evt.target
+        const formElement = /** @type {HTMLFormElement} */ (evt.target)
         if (!formElement.checkValidity()) {
             formElement.reportValidity()
         } else {
@@ -43,7 +58,7 @@ const Form = ({ attrs }) => {
                 .finally(() => {
                     isPending = false
                     afterSubmit(evt)
-                    m.redraw()
+                    globalThis.m.redraw()
                 })
         }
         return false
@@ -72,8 +87,8 @@ const Form = ({ attrs }) => {
                         <div class="form__title">{title}</div>
                     </div>
                     <div class="form__body">
-                        {children.map(vnode => {
-                            if (vnode && vnode.attrs)
+                        {children.map(/** @type {(vnode: import('../Component').VNode) => import('../Component').VNode} */ vnode => {
+                            if (vnode && vnode.attrs && typeof vnode.tag !== 'string')
                                 vnode.attrs.formRef = formRef
                             return vnode
                         })}

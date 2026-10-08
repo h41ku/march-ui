@@ -37,6 +37,12 @@ const Select = ({ attrs }) => {
     let timeoutId
     let validationRequestId = 0
     let validationProcess = false
+    /**
+     * 
+     * @param {number} requestId 
+     * @param {HTMLSelectElement} inputElement 
+     * @returns {() => void}
+     */
     const validateAsync = (requestId, inputElement) => () => {
         Promise.resolve(validate(inputElement))
             .then(result => {
@@ -50,26 +56,32 @@ const Select = ({ attrs }) => {
                         inputElement.setCustomValidity('')
                         hint = undefined
                     }
-                    m.redraw()
+                    globalThis.m.redraw()
                 }
             })
             .catch(error => {
                 state = 'invalid'
                 onerror(error)
-                m.redraw()
+                globalThis.m.redraw()
             })
             .finally(() => {
                 validationProcess = false
             })
     }
-    const validateInput = (inputElement, useRedraw) => {
+    /**
+     * 
+     * @param {HTMLSelectElement} inputElement 
+     * @param {boolean} useRedraw 
+     * @returns {void}
+     */
+    const validateInput = (inputElement, useRedraw = false) => { // BUG
         if (!novalidate && !validationProcess) {
             validationProcess = true
             const prevState = state
             state = 'loading'
             hint = undefined
             if (prevState !== state && useRedraw && validityDelay > 0) {
-                m.redraw()
+                globalThis.m.redraw()
             }
             const requestId = ++ validationRequestId
             clearTimeout(timeoutId)
@@ -83,18 +95,33 @@ const Select = ({ attrs }) => {
             }
         }
     }
+    /**
+     * 
+     * @param {Event} evt 
+     * @returns
+     */
     const onblurHandler = evt => {
         focused = false
-        return onblur(evt)
+        return onblur(evt) // TODO declare types
     }
+    /**
+     * 
+     * @param {Event} evt 
+     * @returns 
+     */
     const onfocusHandler = evt => {
         focused = true
-        return onfocus(evt)
+        return onfocus(evt) // TODO declare types
     }
+    /**
+     * 
+     * @param {Event} evt 
+     * @returns 
+     */
     const oninputHandler = evt => {
         const result = oninput(evt)
-        validateInput(evt.target)
-        return result
+        validateInput(/** @type {HTMLSelectElement} */ (evt.target))
+        return result // TODO declare types
     }
     const subscriptions = {}
     const onFormValid = () => {

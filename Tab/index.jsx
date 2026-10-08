@@ -4,7 +4,7 @@ const Tab = ({ attrs }) => {
             const { key, title, ...attributes } = attrs
             return (
                 <>
-                    {children.map(vnode => {
+                    {children.map(/** @type {(vnode: import("../Component").VNode) => import("../Component").VNode} */ vnode => {
                         if (vnode && vnode.attrs)
                             vnode.attrs = { ...vnode.attrs, ...attributes }
                         return vnode

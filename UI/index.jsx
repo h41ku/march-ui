@@ -1,12 +1,12 @@
 import m from 'mithril'
 
-window.m = m
+globalThis.m = m
 
 import './reset.css'
 import './animations.css'
 import './colors.css'
 
-window.marchUI = {}
+globalThis.marchUI = {}
 
 const UI = () => {
     return {

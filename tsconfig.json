@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "outDir": "__dist__",
+        "jsx": "react",
+        "checkJs": true,
+        "noImplicitAny": false,
+        "strict": false,
+        "jsxFactory": "globalThis.m",
+        "jsxFragmentFactory": "globalThis.m.Fragment",
+    },
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}

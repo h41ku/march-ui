@@ -8,7 +8,7 @@ marchUI.Icon = {
 
 const Icon = ({ attrs: { name } }) => {
     let icon = fallbackIcon
-    const { 1: prefix, 2: item } = ('' + name).match(/^([a-z][a-z0-9-]*)\:([a-z][a-z0-9-]*)$/) || {}
+    const [ _, prefix, item ] = ('' + name).match(/^([a-z][a-z0-9-]*)\:([a-z][a-z0-9-]*)$/) || []
     const url = prefix && item ? `${marchUI.Icon.location}${prefix}/${item}.svg` : false
     if (url) {
         let promise = iconsCache.get(url)
@@ -27,14 +27,14 @@ const Icon = ({ attrs: { name } }) => {
                 })
             iconsCache.set(url, promise)
         }
-        promise.then(result => {
+        promise.then(/** @type {(result: string) => void} */ result => {
             icon = result
-            m.redraw()
+            globalThis.m.redraw()
         })
     }
     return {
         view() {
-            return m.trust(icon)
+            return globalThis.m.trust(icon)
         }
     }
 }

@@ -1,7 +1,7 @@
 export type VNode = {
     tag: string | object,
     key: string | undefined,
-    attrs: object | undefined,
+    attrs: { [key: string]: unknown } | undefined,
     children: Array<VNode> | string | number | boolean | undefined,
     text: string | number | boolean | undefined,
     dom: Element | undefined,

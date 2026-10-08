@@ -3,8 +3,22 @@ import './index.css'
 const themes = [ 'auto', 'light', 'dark' ]
 let i
 
+/**
+ * @param {string|null|undefined} value
+ * @param {string} defaultValue
+ * @returns {string}
+ */
 const fallback = (value, defaultValue) => value === null || value === undefined ? defaultValue : value
+
+/**
+ * @returns {string}
+ */
 const getCurrentTheme = () => fallback(localStorage.getItem('theme'), 'auto')
+
+/**
+ * @param {string} theme 
+ * @returns {void}
+ */
 const setCurrentTheme = theme => {
     const body = document.body
     i = themes.indexOf(theme)
@@ -15,7 +29,14 @@ const setCurrentTheme = theme => {
     document.querySelector('meta[name=theme-color]')
         .setAttribute('content', getComputedStyle(body).getPropertyValue('--theme-color'))
 }
-const listenStorage = f => addEventListener('storage', f)
+
+/**
+ * 
+ * @param {() => void} f 
+ * @returns {void}
+ */
+const listenStorage = f => { addEventListener('storage', f) }
+
 const updateTheme = () => setCurrentTheme(getCurrentTheme())
 listenStorage(updateTheme)
 updateTheme()
