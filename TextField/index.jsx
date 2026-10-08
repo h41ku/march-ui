@@ -19,7 +19,7 @@ const defaultAttributes = {
     oninput: doNothing,
     onerror: doNothing,
     validityDelay: 0,
-    validate: inputElement => {
+    validate: /** @type {(inputElement: HTMLInputElement) => { valid: boolean, message?: string }} */ inputElement => {
         inputElement.setCustomValidity('')
         return { valid: inputElement.checkValidity() }
     }
@@ -39,6 +39,12 @@ const TextField = ({ attrs }) => {
     let timeoutId
     let validationRequestId = 0
     let validationProcess = false
+    /**
+     * 
+     * @param {number} requestId 
+     * @param {HTMLInputElement} inputElement 
+     * @returns {() => void}
+     */
     const validateAsync = (requestId, inputElement) => () => {
         Promise.resolve(validate(inputElement))
             .then(result => {
@@ -52,19 +58,25 @@ const TextField = ({ attrs }) => {
                         inputElement.setCustomValidity('')
                         hint = undefined
                     }
-                    m.redraw()
+                    globalThis.m.redraw()
                 }
             })
             .catch(error => {
                 state = 'invalid'
                 onerror(error)
-                m.redraw()
+                globalThis.m.redraw()
             })
             .finally(() => {
                 validationProcess = false
             })
     }
-    const validateInput = (inputElement, useRedraw) => {
+    /**
+     * 
+     * @param {HTMLInputElement} inputElement 
+     * @param {boolean} [useRedraw = false]
+     * @returns {void}
+     */
+    const validateInput = (inputElement, useRedraw = false) => { // TODO `useRedraw` is always `false`
         if (!novalidate && !validationProcess) {
             validationProcess = true
             const prevState = state
@@ -85,20 +97,35 @@ const TextField = ({ attrs }) => {
             }
         }
     }
+    /**
+     * 
+     * @param {Event} evt 
+     * @returns
+     */
     const onblurHandler = evt => {
         focused = false
         placeholder = initialPlaceholder
         return onblur(evt)
     }
+    /**
+     * 
+     * @param {Event} evt 
+     * @returns
+     */
     const onfocusHandler = evt => {
         focused = true
         placeholder = ''
         return onfocus(evt)
     }
+    /**
+     * 
+     * @param {Event} evt 
+     * @returns
+     */
     const oninputHandler = evt => {
-        value = evt.target.value
+        value = (/** @type {HTMLInputElement} */ (evt.target)).value
         const result = oninput(evt)
-        validateInput(evt.target)
+        validateInput(/** @type {HTMLInputElement} */ (evt.target))
         return result
     }
     const subscriptions = {}

@@ -5,7 +5,7 @@ import classNames from 'classnames'
 const MenuItem = () => {
     return {
         view({ attrs }) {
-            const { state, iconLeft, iconRight, title, ...attributes } = { state: 'shown', ...attrs }
+            const { state, iconLeft, iconRight, title, ...attributes } = { state: 'normal', ...attrs }
             const classes = classNames('menuitem', {
                 'menuitem--selected' : state === 'selected',
                 'menuitem--disabled' : state === 'disabled'

@@ -1,3 +1,9 @@
-import type { VNode, Component } from '../Component';
+import type { Component } from '../Component';
 
-export declare function Tab(vnode: VNode): Component;
+export type TabProps = {
+    key: number | string,
+    title: string,
+    [key: string]: unknown
+}
+
+export default function Tab(props: TabProps): Component;

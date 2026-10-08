@@ -1,3 +1,8 @@
-import type { VNode, Component } from '../Component';
+import type { Component } from '../Component';
 
-export declare function Icon(vnode: VNode): Component;
+export type IconProps = {
+    name: string,
+    [key: string]: unknown
+}
+
+export default function Icon(props: IconProps): Component;

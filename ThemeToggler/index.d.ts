@@ -1,3 +1,7 @@
-import type { VNode, Component } from '../Component';
+import type { Component } from '../Component';
 
-export declare function ThemeToggler(vnode: VNode): Component;
+export type ThemeTogglerProps = {
+    [key: string]: unknown
+}
+
+export default function ThemeToggler(props: ThemeTogglerProps): Component;

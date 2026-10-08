@@ -1,3 +1,8 @@
-import type { VNode, Component } from '../Component';
+import type { Component } from '../Component';
 
-export declare function UI(vnode: VNode): Component;
+export type UIProps = {
+    settings?: {},
+    [key: string]: unknown
+}
+
+export default function UI(props: UIProps): Component;

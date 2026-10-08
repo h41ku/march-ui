@@ -1,12 +1,74 @@
 {
   "name": "march-ui",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Lightweight UI-kit for Mithril.js",
   "type": "module",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "types": "./index.d.ts",
+  "main": "./index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.d.ts"
+    },
+    "./Button": {
+      "types": "./Button/index.d.ts",
+      "import": "./Button/index.jsx"
+    },
+    "./Component": {
+      "types": "./Component/index.d.ts",
+      "import": "./Component/index.jsx"
+    },
+    "./ContextMenu": {
+      "types": "./ContextMenu/index.d.ts",
+      "import": "./ContextMenu/index.jsx"
+    },
+    "./Form": {
+      "types": "./Form/index.d.ts",
+      "import": "./Form/index.jsx"
+    },
+    "./Icon": {
+      "types": "./Icon/index.d.ts",
+      "import": "./Icon/index.jsx"
+    },
+    "./MenuItem": {
+      "types": "./MenuItem/index.d.ts",
+      "import": "./MenuItem/index.jsx"
+    },
+    "./Notice": {
+      "types": "./Notice/index.d.ts",
+      "import": "./Notice/index.jsx"
+    },
+    "./Splitter": {
+      "types": "./Splitter/index.d.ts",
+      "import": "./Splitter/index.jsx"
+    },
+    "./Select": {
+      "types": "./Select/index.d.ts",
+      "import": "./Select/index.jsx"
+    },
+    "./Tab": {
+      "types": "./Tab/index.d.ts",
+      "import": "./Tab/index.jsx"
+    },
+    "./Tabs": {
+      "types": "./Tabs/index.d.ts",
+      "import": "./Tabs/index.jsx"
+    },
+    "./TextField": {
+      "types": "./TextField/index.d.ts",
+      "import": "./TextField/index.jsx"
+    },
+    "./ThemeToggler": {
+      "types": "./ThemeToggler/index.d.ts",
+      "import": "./ThemeToggler/index.jsx"
+    },
+    "./UI": {
+      "types": "./UI/index.d.ts",
+      "import": "./UI/index.jsx"
+    }
   },
   "keywords": [],
   "author": "",
@@ -14,5 +76,8 @@
   "dependencies": {
     "classnames": "^2.5.1",
     "mithril": "^2.2.11"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4"
   }
 }

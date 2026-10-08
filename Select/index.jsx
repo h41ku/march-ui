@@ -74,7 +74,7 @@ const Select = ({ attrs }) => {
      * @param {boolean} useRedraw 
      * @returns {void}
      */
-    const validateInput = (inputElement, useRedraw = false) => { // BUG
+    const validateInput = (inputElement, useRedraw = false) => { // TODO `useRedraw` is always `false`
         if (!novalidate && !validationProcess) {
             validationProcess = true
             const prevState = state
@@ -102,7 +102,7 @@ const Select = ({ attrs }) => {
      */
     const onblurHandler = evt => {
         focused = false
-        return onblur(evt) // TODO declare types
+        return onblur(evt)
     }
     /**
      * 
@@ -111,7 +111,7 @@ const Select = ({ attrs }) => {
      */
     const onfocusHandler = evt => {
         focused = true
-        return onfocus(evt) // TODO declare types
+        return onfocus(evt)
     }
     /**
      * 
@@ -121,7 +121,7 @@ const Select = ({ attrs }) => {
     const oninputHandler = evt => {
         const result = oninput(evt)
         validateInput(/** @type {HTMLSelectElement} */ (evt.target))
-        return result // TODO declare types
+        return result
     }
     const subscriptions = {}
     const onFormValid = () => {
@@ -194,7 +194,7 @@ const Select = ({ attrs }) => {
                                 onfocus={onfocusHandler}
                                 oninput={oninputHandler}
                             >
-                                {items.map(item => (
+                                {items.map(/** @type {(item: { value: string, name: string }) => import('../Component').VNode} */ item => (
                                     <option value={item.value} selected={item.value === selected}>
                                         {item.name}
                                     </option>

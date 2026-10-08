@@ -1,3 +1,8 @@
-import type { VNode, Component } from '../Component';
+import type { Component } from '../Component';
 
-export declare function Splitter(vnode: VNode): Component;
+export type SplitterProps = {
+    view?: 'horizontal' | 'vertical' | string,
+    [key: string]: unknown
+}
+
+export default function Splitter(props: SplitterProps): Component;

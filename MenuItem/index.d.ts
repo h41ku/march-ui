@@ -1,3 +1,11 @@
-import type { VNode, Component } from '../Component';
+import type { Component } from '../Component';
 
-export declare function MenuItem(vnode: VNode): Component;
+export type MenuItemProps = {
+    title: string,
+    state?: 'selected' | 'disabled' | 'normal' | string,
+    iconLeft?: Component,
+    iconRight?: Component,
+    [key: string]: unknown
+}
+
+export default function MenuItem(props: MenuItemProps): Component;

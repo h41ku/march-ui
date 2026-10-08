@@ -7,6 +7,7 @@
         "strict": false,
         "jsxFactory": "globalThis.m",
         "jsxFragmentFactory": "globalThis.m.Fragment",
+        "types": ["node"]
     },
     "exclude": [
         "node_modules",

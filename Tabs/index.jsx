@@ -7,7 +7,7 @@ const Tabs = ({ attrs }) => {
     let { active } = attrs
     /**
      * 
-     * @param {unknown} key 
+     * @param {number | string} key 
      * @param {() => void | undefined} onchange 
      * @returns 
      */
@@ -19,10 +19,10 @@ const Tabs = ({ attrs }) => {
     return {
         view({ attrs: { active: activeNext, onchange, ...attributes }, children }) {
             const tabs = children.filter(({ tag }) => tag === Tab)
-                .map(/** @type {(tab: import('../Component').VNode, i: number) => { key: unknown, title: unknown, tab: import('../Component').VNode }} */ (tab, i) => {
+                .map(/** @type {(tab: import('../Component').VNode, i: number) => { key: number | string, title: string, tab: import('../Component').VNode }} */ (tab, i) => {
                     const { key, attrs: { title } } = tab
                     tab.attrs = { ...tab.attrs, ...attributes }
-                    return { key: key === undefined ? i : key, title, tab }
+                    return { key: key === undefined ? i : key, title: /** @type {string} */ (title), tab }
                 })
             const activeIndex = tabs.findIndex(({ key }) => key === active || active === undefined)
             if (activeIndex >= 0) {
@@ -33,7 +33,7 @@ const Tabs = ({ attrs }) => {
                 <div class={classes}>
                     <div class="tabs__list">
                         <div class="tabs__switch">
-                            {tabs.map(/** @type {(tab: { key: unknown, title: unknown, tab: import('../Component').VNode }, i: number) => import('../Component').VNode} */ ({ key, title }, i) => {
+                            {tabs.map(/** @type {(tab: { key: number | string, title: string, tab: import('../Component').VNode }, i: number) => import('../Component').VNode} */ ({ key, title }, i) => {
                                 return <div class={classNames('tab__title', {
                                     'tab__title--active': i === activeIndex
                                 })} onclick={switchTab(key, onchange)}>{title}</div>

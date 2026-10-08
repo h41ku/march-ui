@@ -1,3 +1,11 @@
-import type { VNode, Component } from '../Component';
+import type { Component } from '../Component';
 
-export declare function Notice(vnode: VNode): Component;
+export type NoticeProps = {
+    icon: Component,
+    title?: string,
+    text: string,
+    view?: 'danger' | 'warning' | 'success' | 'neutral' | string,
+    [key: string]: unknown
+}
+
+export default function Notice(props: NoticeProps): Component;

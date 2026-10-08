@@ -1,3 +1,8 @@
-import type { VNode, Component } from '../Component';
+import type { Component } from '../Component';
 
-export declare function ContextMenu(vnode: VNode): Component;
+export type ContextMenuProps = {
+    state?: 'shown' | 'hidden' | string,
+    [key: string]: unknown
+}
+
+export default function ContextMenu(props: ContextMenuProps): Component;
